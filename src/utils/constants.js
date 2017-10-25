@@ -1,0 +1,11 @@
+export const colors = {
+  WHITE: '#FFFFFF',
+  PURPLE_200: '#CE93D8',
+  PURPLE_300: '#BA68C8',
+  PURPLE_400: '#AB47BC',
+  PURPLE_500: '#9C27B0',
+  PURPLE_600: '#8E24AA',
+  PURPLE_700: '#7B1FA2',
+  PURPLE_800: '#6A1B9A',
+  PURPLE_900: '#4A148C',
+};
