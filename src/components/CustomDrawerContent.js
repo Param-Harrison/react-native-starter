@@ -23,7 +23,7 @@ const Avatar = styled.View`
   width: 120;
   height: 120;
   borderRadius: 60;
-  backgroundColor: ${props => props.theme.PURPLE_400};
+  backgroundColor: ${props => props.theme.PURPLE_500};
 `;
 
 const ItemContainer = styled.View`

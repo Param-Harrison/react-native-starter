@@ -142,9 +142,9 @@ const AppDrawer = DrawerNavigator({
       {...props}
     />),
   contentOptions: {
-    activeBackgroundColor: colors.PURPLE_400,
+    activeBackgroundColor: colors.PURPLE_500,
     activeTintColor: colors.WHITE,
-    inactiveTintColor: colors.PURPLE_500,
+    inactiveTintColor: colors.PURPLE_600,
   },
 });
 
