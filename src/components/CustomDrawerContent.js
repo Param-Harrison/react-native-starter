@@ -2,8 +2,6 @@ import React from 'react';
 import { DrawerItems } from 'react-navigation';
 import styled from 'styled-components/native';
 
-import Button from './Button';
-
 const ContainerView = styled.View`
   flex: 1;
 `;
@@ -30,12 +28,6 @@ const ItemContainer = styled.View`
   flex: 6;
 `;
 
-const ButtonContainer = styled.View`
-  flex: 2;
-  justifyContent: center;
-  alignItems: center;
-`;
-
 const CustomDrawerContent = (props) => (
   <ContainerView>
     <DrawerContainer>
@@ -46,9 +38,6 @@ const CustomDrawerContent = (props) => (
         <DrawerItems {...props} />
       </ItemContainer>
     </DrawerContainer>
-    <ButtonContainer>
-      <Button text="Logout" onPress={() => props.navigation.navigate('Welcome')} />
-    </ButtonContainer>
   </ContainerView>
 );
 
