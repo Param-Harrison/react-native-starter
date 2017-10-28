@@ -3,12 +3,13 @@ const color = {
   TEXT_COLOR: '#444444',
   APP_UKS: '#EF9A9A',
   APP_KAKS: '#F44336',
-  APP_KOLM: '#D50000',
+  APP_KOLM: '#E53935',
   APP_NELI: '#F8BBD0',
+  APP_VIIS: '#B71C1C',
 };
 
 export const colors = {
-  StatusBar: color.APP_UKS,
+  StatusBar: color.APP_VIIS,
   body: color.WHITE,
   textColor: color.TEXT_COLOR,
   inactiveTintColor: color.APP_NELI,
