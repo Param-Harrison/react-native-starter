@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/native';
-import Icon from 'react-native-vector-icons/Ionicons';
+import Icon from 'react-native-vector-icons/Feather';
 
 const IconLeftContainer = styled.TouchableOpacity`
   height: 100%;
@@ -10,7 +10,7 @@ const IconLeftContainer = styled.TouchableOpacity`
 
 const Back = ({ onPress }) => (
   <IconLeftContainer onPress={onPress}>
-    <Icon name="md-arrow-back" size={25} color="white" />
+    <Icon name="arrow-left" size={25} color="white" />
   </IconLeftContainer>
 );
 
