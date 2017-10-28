@@ -8,7 +8,6 @@ import {
 import { default as FontAwesome } from 'react-native-vector-icons/FontAwesome';
 import { default as Ionicons } from 'react-native-vector-icons/Ionicons';
 
-import WelcomeScreen from './screens/Welcome';
 import HomeScreen from './screens/Home';
 import ProfileScreen from './screens/Profile';
 import FavoritesScreen from './screens/Favorites';
@@ -121,9 +120,6 @@ const AppMainStack = StackNavigator({
     })
   },
 }, {
-  cardStyle: {
-    backgroundColor: colors.cardBG,
-  },
   mode: 'modal',
 });
 
@@ -153,7 +149,6 @@ const AppDrawer = DrawerNavigator({
 });
 
 const Navigator = TabNavigator({
-  Welcome: { screen: WelcomeScreen },
   Main: { screen: AppDrawer },
 }, {
   navigationOptions: {

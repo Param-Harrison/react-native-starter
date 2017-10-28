@@ -6,6 +6,7 @@ const color = {
   APP_KOLM: '#E53935',
   APP_NELI: '#F8BBD0',
   APP_VIIS: '#B71C1C',
+  APP_KUUS: '#EF5350',
 };
 
 export const colors = {
@@ -16,8 +17,8 @@ export const colors = {
   WHITE: color.WHITE,
   tabBG: color.APP_KOLM,
   headerStyle: color.APP_KOLM,
-  cardBG: color.APP_UKS,
-  drawerActiveBG: color.APP_UKS,
+  cardBG: color.WHITE,
+  drawerActiveBG: color.APP_KUUS,
   drawerInactiveColor: color.APP_KAKS,
   buttonBG: color.APP_KOLM,
   buttonColor: color.APP_KAKS,
