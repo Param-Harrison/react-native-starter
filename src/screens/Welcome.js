@@ -11,7 +11,7 @@ const ContainerView = styled.View`
 
 const TitleText = styled.Text`
   fontSize: 30;
-  color: ${props => props.theme.WHITE};
+  color: ${props => props.theme.textColor};
 `;
 
 const ButtonContainer = styled.View`

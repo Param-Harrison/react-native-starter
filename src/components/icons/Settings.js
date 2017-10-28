@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/native';
-import Icon from 'react-native-vector-icons/Ionicons';
+import Icon from 'react-native-vector-icons/Feather';
 
 const IconRightContainer = styled.TouchableOpacity`
   height: 100%;
@@ -10,7 +10,7 @@ const IconRightContainer = styled.TouchableOpacity`
 
 const Settings = ({ onPress }) => (
   <IconRightContainer onPress={onPress}>
-    <Icon name="md-settings" size={25} color="white" />
+    <Icon name="settings" size={25} color="white" />
   </IconRightContainer>
 );
 

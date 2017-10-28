@@ -5,11 +5,12 @@ const ContainerView = styled.View`
   flex: 1;
   justifyContent: center;
   alignItems: center;
+  backgroundColor: ${props => props.theme.WHITE};
 `;
 
 const TitleText = styled.Text`
-  fontSize: 30;
-  color: ${props => props.theme.WHITE};
+  fontSize: 24;
+  color: ${props => props.theme.textColor};
 `;
 
 class HomeScreen extends Component {

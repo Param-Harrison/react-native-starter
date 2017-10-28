@@ -32,7 +32,7 @@ const AppMainTab = TabNavigator({
         <FontAwesome name="home" size={23} color={tintColor} />
       ),
       headerStyle: {
-        backgroundColor: colors.PURPLE_400,
+        backgroundColor: colors.headerStyle,
       },
       headerTitle: 'Sweet Home',
       headerTitleStyle: {
@@ -53,7 +53,7 @@ const AppMainTab = TabNavigator({
         <FontAwesome name="heartbeat" size={23} color={tintColor} />
       ),
       headerStyle: {
-        backgroundColor: colors.PURPLE_400,
+        backgroundColor: colors.headerStyle,
       },
       headerTitle: 'Favorites',
       headerTitleStyle: {
@@ -74,7 +74,7 @@ const AppMainTab = TabNavigator({
         <FontAwesome name="user-circle" size={23} color={tintColor} />
       ),
       headerStyle: {
-        backgroundColor: colors.PURPLE_400,
+        backgroundColor: colors.headerStyle,
       },
       headerTitle: 'Profile',
       headerTitleStyle: {
@@ -87,16 +87,16 @@ const AppMainTab = TabNavigator({
 }, {
   tabBarOptions: {
     activeTintColor: colors.WHITE,
-    inactiveTintColor: colors.PURPLE_300,
-    inactiveBackgroundColor: colors.PURPLE_400,
-    activeBackgroundColor: colors.PURPLE_400,
+    inactiveTintColor: colors.inactiveTintColor,
+    inactiveBackgroundColor: colors.tabBG,
+    activeBackgroundColor: colors.tabBG,
     showIcon: true,
     showLabel: Platform.OS === 'ios',
     indicatorStyle: {
-      backgroundColor: colors.PURPLE_400,
+      backgroundColor: colors.WHITE,
     },
     style: {
-      backgroundColor: colors.PURPLE_400,
+      backgroundColor: colors.tabBG,
     },
     upperCaseLabel: false,
   },
@@ -107,10 +107,26 @@ const AppMainTab = TabNavigator({
 
 const AppMainStack = StackNavigator({
   Home: { screen: AppMainTab },
-  Settings: { screen: SettingsScreen },
+  Settings: {
+    screen: SettingsScreen,
+    navigationOptions: ({ navigation }) => ({
+      drawerLabel: 'Settings',
+      drawerIcon: ({ tintColor }) => (
+        <Ionicons name="md-settings" size={23} color={tintColor} />
+      ),
+      headerStyle: {
+        backgroundColor: colors.headerStyle,
+      },
+      headerTitle: 'Settings',
+      headerTitleStyle: {
+        color: colors.WHITE,
+      },
+      headerLeft: <BackIcon onPress={() => navigation.goBack()} />,
+    })
+  },
 }, {
   cardStyle: {
-    backgroundColor: colors.PURPLE_300,
+    backgroundColor: colors.cardBG,
   },
   mode: 'modal',
 });
@@ -121,20 +137,6 @@ const AppDrawer = DrawerNavigator({
   },
   Settings: {
     screen: SettingsScreen,
-    navigationOptions: ({ navigation }) => ({
-      drawerLabel: 'Settings',
-      drawerIcon: ({ tintColor }) => (
-        <Ionicons name="md-settings" size={23} color={tintColor} />
-      ),
-      headerStyle: {
-        backgroundColor: colors.PURPLE_400,
-      },
-      headerTitle: 'Settings',
-      headerTitleStyle: {
-        color: colors.WHITE,
-      },
-      headerLeft: <BackIcon onPress={() => navigation.goBack()} />,
-    })
   },
 }, {
   contentComponent: props =>
@@ -142,9 +144,9 @@ const AppDrawer = DrawerNavigator({
       {...props}
     />),
   contentOptions: {
-    activeBackgroundColor: colors.PURPLE_500,
+    activeBackgroundColor: colors.drawerActiveBG,
     activeTintColor: colors.WHITE,
-    inactiveTintColor: colors.PURPLE_600,
+    inactiveTintColor: colors.drawerInactiveColor,
   },
 });
 
