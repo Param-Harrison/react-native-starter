@@ -1,4 +1,4 @@
-package com.videoapp;
+package com.nativeui;
 
 import com.facebook.react.ReactActivity;
 

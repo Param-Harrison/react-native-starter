@@ -1,4 +1,4 @@
-package com.videoapp;
+package com.nativeui;
 
 import android.app.Application;
 

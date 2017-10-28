@@ -101,8 +101,8 @@ const AppMainTab = TabNavigator({
     upperCaseLabel: false,
   },
   tabBarPosition: 'bottom',
-  swipeEnabled: false,
-  animationEnabled: false,
+  swipeEnabled: true,
+  animationEnabled: true,
 });
 
 const AppMainStack = StackNavigator({
