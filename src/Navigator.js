@@ -109,6 +109,10 @@ const AppMainStack = StackNavigator({
   Settings: {
     screen: SettingsScreen,
     navigationOptions: ({ navigation }) => ({
+      drawerLabel: 'Settings',
+      drawerIcon: ({ tintColor }) => (
+        <Ionicons name="md-settings" size={23} color={tintColor} />
+      ),
       headerStyle: {
         backgroundColor: colors.headerStyle,
       },
@@ -120,22 +124,14 @@ const AppMainStack = StackNavigator({
     })
   },
 }, {
+  cardStyle: {
+    backgroundColor: colors.cardBG,
+  },
   mode: 'modal',
 });
 
 const AppDrawer = DrawerNavigator({
-  Home: {
-    screen: AppMainStack,
-  },
-  Settings: {
-    screen: SettingsScreen,
-    navigationOptions: ({ navigation }) => ({
-      drawerLabel: 'Settings',
-      drawerIcon: ({ tintColor }) => (
-        <Ionicons name="md-settings" size={23} color={tintColor} />
-      ),
-    })
-  },
+  Home: { screen: AppMainStack },
 }, {
   contentComponent: props =>
     (<CustomDrawerContent
